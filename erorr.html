@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .team-member {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff09;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+            animation: slideInLeft 1s ease;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .member-info h2 {
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .member-info p {
+            margin: 0;
+            font-size: 16px;
+            color: #ff0000;
+        }
+        .container h1{
+          color: deeppink;
+        }
+        .container h2{
+            color: deeppink;
+        }
+        .container p{
+            color: aqua;
+        }
+        .container h3{
+            color: azure;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Team XG6 Officials</h1>
+
+    <div class="team-member">
+        <img src="images/undm.webp" alt="Team Member 1">
+        <div class="member-info">
+            <h2>MUHAMMED NIHAL MP</h2>
+            <h3>2201132267</h3><br>
+            <p>The Leader: This teammate takes charge, motivates others, and provides direction. They lead by example, inspire confidence, and help the team stay focused on its goals.</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="images/mub.jpg" alt="Team Member 2">
+        <div class="member-info">
+            <h2>MUHAMMED MUBASHIR KP</h2>
+            <h3>2201132265</h3><br>
+            <p>The Innovator: This teammate is creative, always coming up with new ideas and solutions to problems. They think outside the box, push boundaries, and inspire others to think creatively.</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="images/am.jpg" alt="Team Member 3">
+        <div class="member-info">
+            <h2>  AMJAD ALI </h2>
+            <h3>2201132239</h3><br>
+            <p>The Supporter: This teammate is empathetic, understanding, and always ready to lend a helping hand. They offer encouragement, listen to others, and create a positive and supportive atmosphere within the team.</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="images/ab.jpg" alt="Team Member 4">
+        <div class="member-info">
+            <h2>ABHINAV MS</h2>
+            <h3>2201133127</h3><br>
+            <p>The Specialist: This teammate has deep expertise in a particular area and provides valuable insights and knowledge. They excel in their domain, offer guidance to others, and contribute their specialized skills to the team's success.</p>
+        </div>
+    </div>
+
+    <div class="team-member">
+        <img src="images/an.jpg" alt="Team Member 5">
+        <div class="member-info">
+            <h2>MUHAMMED ANSHAF P</h2>
+            <h3>2201133136</h3><br>
+            <p>The Executor: This teammate is reliable, efficient, and gets things done. They are organized, detail-oriented, and ensure that tasks are completed on time and to a high standard. They provide stability and consistency to the team.</p>
+        </div>
+    </div>
+    <a href="index.html" class="overlay-btn">#Back To Home</a>
+</div>
+
+<script>
+    var members = document.querySelectorAll('.team-member');
+    var index = 0;
+
+    function showMember(index) {
+        members.forEach(function(member, i) {
+            if (i === index) {
+                member.style.display = 'block';
+            } else {
+                member.style.display = 'none';
+            }
+        });
+    }
+
+    function nextMember() {
+        index = (index + 1) % members.length;
+        showMember(index);
+    }
+
+    setInterval(nextMember, 3000); // Change member every 3 seconds
+    showMember(index); // Show the first member initially
+</script>
+
+</body>
+</html>
